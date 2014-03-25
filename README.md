@@ -28,7 +28,7 @@ Example
 Screenshot
 ----------
 
-![The Grid](https://raw.githubusercontent.com/supertop/grid-window/master/thegrid.png "I tried to picture clusters of information")
+![The Grid](https://raw.githubusercontent.com/supertop/grid-window/master/thegrid.png?1 "I tried to picture clusters of information")
 
 
 Notes
