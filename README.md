@@ -13,6 +13,18 @@ How To Use
 2. Configure the grid size and color.
 3. Optionally add a gesture to toggle the grid on or off.
 
+Example
+-------
+
+```
+  SUPGridWindow *grid = [SUPGridWindow sharedGridWindow];
+  
+  [grid setGridColor:[UIColor redColor]];
+  [grid setMajorGridSize:CGSizeMake(40, 40)];
+  [grid setMinorGridSize:CGSizeMake(10, 10)];
+```
+
+
 Notes
 -----
 
