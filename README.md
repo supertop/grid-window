@@ -17,13 +17,15 @@ The included example app
 Example
 -------
 
-```	SUPGridWindow *grid = [SUPGridWindow sharedGridWindow];
+```
+	SUPGridWindow *grid = [SUPGridWindow sharedGridWindow];
+	
 	[grid setGridColor:[UIColor redColor]];
 	[grid setMajorGridSize:CGSizeMake(40, 40)];
 	[grid setMinorGridSize:CGSizeMake(10, 10)];
 ```
 
-![The Grid](https://github.com/supertop/grid-window/blob/master/thegrid.png "I tried to picture clusters of information")
+![The Grid](https://raw.githubusercontent.com/supertop/grid-window/master/thegrid.png "I tried to picture clusters of information")
 
 Notes
 -----
