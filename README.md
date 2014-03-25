@@ -1,13 +1,14 @@
-Supertop Grid
-=============
+# Supertop Grid
 
 A grid overlay for iOS apps. 
 
 Use this during the development of your app to help align your interface to a grid, and 
-easily spot layout issues.
+easily spot layout issues. It will overlay every view in your app, but not interfere with
+interaction, so you can still move around.
 
-How To Use
-----------
+The included example app
+
+## How To Use
 
 1. Add SUPGridWindow and SUPGridView to your project.
 2. Configure the grid size and color.
@@ -24,6 +25,13 @@ Example
   [grid setMinorGridSize:CGSizeMake(10, 10)];
 ```
 
+```	SUPGridWindow *grid = [SUPGridWindow sharedGridWindow];
+	[grid setGridColor:[UIColor redColor]];
+	[grid setMajorGridSize:CGSizeMake(40, 40)];
+	[grid setMinorGridSize:CGSizeMake(10, 10)];
+```
+
+![The Grid](https://github.com/supertop/grid-window/blob/master/thegrid.png "I tried to picture clusters of information")
 
 Notes
 -----
