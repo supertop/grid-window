@@ -17,14 +17,6 @@ The included example app
 Example
 -------
 
-```
-  SUPGridWindow *grid = [SUPGridWindow sharedGridWindow];
-  
-  [grid setGridColor:[UIColor redColor]];
-  [grid setMajorGridSize:CGSizeMake(40, 40)];
-  [grid setMinorGridSize:CGSizeMake(10, 10)];
-```
-
 ```	SUPGridWindow *grid = [SUPGridWindow sharedGridWindow];
 	[grid setGridColor:[UIColor redColor]];
 	[grid setMajorGridSize:CGSizeMake(40, 40)];
