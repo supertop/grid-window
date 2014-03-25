@@ -1,4 +1,28 @@
-grid-window
-===========
+Supertop Grid
+=============
 
 A grid overlay for iOS apps. 
+
+Use this during the development of your app to help align your interface to a grid, and 
+easily spot layout issues.
+
+How To Use
+----------
+
+1. Add SUPGridWindow and SUPGridView to your project.
+2. Configure the grid size and color.
+3. Optionally add a gesture to toggle the grid on or off.
+
+Notes
+-----
+
+* This is a development tool. You probably want to make sure you don't ship with this. The 
+window is added above all others, so it will even overlay notifications. Apple doesn't like 
+that.
+
+* The right gesture to toggle the grid will vary app to app, so we didn't set any by default.
+
+To Do
+-----
+
+* The ability to scroll the grid along with scrollviews.
