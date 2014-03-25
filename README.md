@@ -25,11 +25,10 @@ Example
 	[grid setMinorGridSize:CGSizeMake(10, 10)];
 ```
 
-Screenshots
------------
+Screenshot
+----------
 
-![The Grid](https://raw.githubusercontent.com/supertop/grid-window/master/thegrid.png?1 "I tried to picture clusters of information")
-![The Grid](https://raw.githubusercontent.com/supertop/grid-window/master/grid2.png?1)
+![The Grid](https://raw.githubusercontent.com/supertop/grid-window/master/screenshot.png?1)
 
 Notes
 -----
