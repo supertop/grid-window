@@ -21,6 +21,8 @@
 		1A1C300C18E20AC000CF7B34 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A1C2FEE18E20AC000CF7B34 /* UIKit.framework */; };
 		1A1C301418E20AC000CF7B34 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1A1C301218E20AC000CF7B34 /* InfoPlist.strings */; };
 		1A1C301618E20AC000CF7B34 /* gridTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1C301518E20AC000CF7B34 /* gridTests.m */; };
+		1A1C302A18E20B1D00CF7B34 /* SUPGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1C302718E20B1D00CF7B34 /* SUPGridView.m */; };
+		1A1C302B18E20B1D00CF7B34 /* SUPGridWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1C302918E20B1D00CF7B34 /* SUPGridWindow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		1A1C301118E20AC000CF7B34 /* gridTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "gridTests-Info.plist"; sourceTree = "<group>"; };
 		1A1C301318E20AC000CF7B34 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1A1C301518E20AC000CF7B34 /* gridTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gridTests.m; sourceTree = "<group>"; };
+		1A1C302618E20B1D00CF7B34 /* SUPGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUPGridView.h; sourceTree = "<group>"; };
+		1A1C302718E20B1D00CF7B34 /* SUPGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUPGridView.m; sourceTree = "<group>"; };
+		1A1C302818E20B1D00CF7B34 /* SUPGridWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUPGridWindow.h; sourceTree = "<group>"; };
+		1A1C302918E20B1D00CF7B34 /* SUPGridWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUPGridWindow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,7 @@
 		1A1C2FF018E20AC000CF7B34 /* grid */ = {
 			isa = PBXGroup;
 			children = (
+				1A1C302518E20B1D00CF7B34 /* SUPGridWindow */,
 				1A1C2FF918E20AC000CF7B34 /* SUPAppDelegate.h */,
 				1A1C2FFA18E20AC000CF7B34 /* SUPAppDelegate.m */,
 				1A1C2FFC18E20AC000CF7B34 /* Main.storyboard */,
@@ -150,6 +157,17 @@
 				1A1C301218E20AC000CF7B34 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1A1C302518E20B1D00CF7B34 /* SUPGridWindow */ = {
+			isa = PBXGroup;
+			children = (
+				1A1C302618E20B1D00CF7B34 /* SUPGridView.h */,
+				1A1C302718E20B1D00CF7B34 /* SUPGridView.m */,
+				1A1C302818E20B1D00CF7B34 /* SUPGridWindow.h */,
+				1A1C302918E20B1D00CF7B34 /* SUPGridWindow.m */,
+			);
+			path = SUPGridWindow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +269,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A1C300118E20AC000CF7B34 /* SUPViewController.m in Sources */,
+				1A1C302B18E20B1D00CF7B34 /* SUPGridWindow.m in Sources */,
+				1A1C302A18E20B1D00CF7B34 /* SUPGridView.m in Sources */,
 				1A1C2FF718E20AC000CF7B34 /* main.m in Sources */,
 				1A1C2FFB18E20AC000CF7B34 /* SUPAppDelegate.m in Sources */,
 			);

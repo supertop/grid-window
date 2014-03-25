@@ -3,10 +3,11 @@
 //  grid
 //
 //  Created by Padraig O Cinneide on 2014-03-25.
-//  Copyright (c) 2014 Padraig Kennedy. All rights reserved.
+//  Copyright (c) 2014 Supertop. All rights reserved.
 //
 
 #import "SUPViewController.h"
+#import "SUPGridWindow.h"
 
 @interface SUPViewController ()
 
@@ -24,6 +25,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)toggleGrid:(id)sender
+{
+    [[SUPGridWindow sharedGridWindow] toggleHidden];
 }
 
 @end
