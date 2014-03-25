@@ -6,7 +6,7 @@ Use this during the development of your app to help align your interface to a gr
 easily spot layout issues. It will overlay every view in your app, but not interfere with
 interaction, so you can still move around.
 
-The included example app
+A simple example app is included.
 
 ## How To Use
 
