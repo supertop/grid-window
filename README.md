@@ -29,7 +29,7 @@ Screenshots
 -----------
 
 ![The Grid](https://raw.githubusercontent.com/supertop/grid-window/master/thegrid.png?1 "I tried to picture clusters of information")
-![The Grid](https://raw.githubusercontent.com/supertop/grid-window/master/thegrid2.png)
+![The Grid](https://raw.githubusercontent.com/supertop/grid-window/master/grid2.png?1)
 
 Notes
 -----
