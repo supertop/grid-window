@@ -34,7 +34,7 @@ Notes
 -----
 
 * This is a development tool. You probably want to make sure you don't ship with this. The 
-window is added above all others, so it will even overlay notifications. Apple doesn't like 
+window is added above all others, so it will even overlay the keyboard and the status bar. Apple doesn't like 
 that.
 
 * The right gesture to toggle the grid will vary app to app, so we didn't set any by default.
