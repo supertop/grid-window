@@ -14,4 +14,6 @@
 @property (nonatomic, assign) CGSize minorGridSize;
 @property (nonatomic, strong) UIColor *gridColor;
 
+@property (nonatomic, assign) BOOL startFromBottom;
+
 @end

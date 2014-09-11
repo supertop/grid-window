@@ -14,6 +14,7 @@
 
 - (void)toggleHidden;
 
+- (void)setStartFromBottom:(BOOL)bottom;
 - (void)setMajorGridSize:(CGSize)gridSize;
 - (void)setMinorGridSize:(CGSize)gridSize;
 - (void)setGridColor:(UIColor *)gridColor;

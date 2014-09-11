@@ -54,6 +54,11 @@
     self.hidden = !self.hidden;
 }
 
+- (void)setStartFromBottom:(BOOL)bottom
+{
+    [self.gridView setStartFromBottom:bottom];
+}
+
 - (void)setMinorGridSize:(CGSize)gridSize
 {
     [self.gridView setMinorGridSize:gridSize];

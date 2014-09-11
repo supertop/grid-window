@@ -33,11 +33,18 @@ CGFloat SUPRound(CGFloat f) {
 
         self.minorGridSize = CGSizeMake(5, 5);
         self.majorGridSize = CGSizeMake(20, 20);
-        
+        self.startFromBottom = NO;
         self.opaque = NO;
         self.backgroundColor = [UIColor clearColor];
     }
     return self;
+}
+
+- (void)setStartFromBottom:(BOOL)startFromBottom
+{
+    _startFromBottom = startFromBottom;
+    
+    [self setNeedsDisplay];
 }
 
 - (void)setGridColor:(UIColor *)gridColor
@@ -54,32 +61,42 @@ CGFloat SUPRound(CGFloat f) {
     CGContextClearRect(context, rect);
     CGContextSetShouldAntialias(context, NO);
     
-    CGFloat dashes[2] = {1,1};
-    
-    for (CGFloat y = 0; y < self.bounds.size.height; y = y + self.minorGridSize.height)
-    {
-        if (fmodf(y, self.majorGridSize.height) == 0) {
-            CGContextSetStrokeColorWithColor(context, self.strongColor.CGColor);
-            CGContextSetLineDash(context, 1, dashes, 0);
-        } else {
-            CGContextSetStrokeColorWithColor(context, self.lightColor.CGColor);
-            CGContextSetLineDash(context, 1, dashes, 2);
+    if (self.startFromBottom) {
+        for (CGFloat y = self.bounds.size.height; y > 0; y = y - self.minorGridSize.height)
+        {
+            [self setLineAttributesForPosition:self.bounds.size.height - y];
+            [self drawLineAtYPosition:y];
         }
-        [self drawLineAtYPosition:y];
+    } else {
+        for (CGFloat y = 0; y < self.bounds.size.height; y = y + self.minorGridSize.height)
+        {
+            [self setLineAttributesForPosition:y];
+            [self drawLineAtYPosition:y];
+        }
     }
+
 
     for (CGFloat x = 0; x < self.bounds.size.width; x = x + self.minorGridSize.width)
     {
-        if (fmodf(x, self.majorGridSize.width) == 0) {
-            CGContextSetStrokeColorWithColor(context, self.strongColor.CGColor);
-            CGContextSetLineDash(context, 1, dashes, 0);
-        } else {
-            CGContextSetStrokeColorWithColor(context, self.lightColor.CGColor);
-            CGContextSetLineDash(context, 1, dashes, 2);
-        }
+        [self setLineAttributesForPosition:x];
         [self drawLineAtXPosition:x];
     }
 }
+
+- (void)setLineAttributesForPosition:(CGFloat)pos
+{
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGFloat dashes[2] = {1,1};
+    
+    if (fmodf(pos, self.majorGridSize.width) == 0) {
+        CGContextSetStrokeColorWithColor(context, self.strongColor.CGColor);
+        CGContextSetLineDash(context, 1, dashes, 0);
+    } else {
+        CGContextSetStrokeColorWithColor(context, self.lightColor.CGColor);
+        CGContextSetLineDash(context, 1, dashes, 2);
+    }
+}
+
 
 - (void)drawLineAtYPosition:(CGFloat)yPos
 {
