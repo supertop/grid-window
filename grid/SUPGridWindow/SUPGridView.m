@@ -15,13 +15,7 @@
 
 @end
 
-CGFloat SUPRound(CGFloat f) {
-#if __LP64__
-    return round(f);
-#else
-    return roundf(f);
-#endif
-}
+#define SINGLE_PIXEL (1.0f / [[UIScreen mainScreen] scale])
 
 @implementation SUPGridView
 
@@ -100,25 +94,25 @@ CGFloat SUPRound(CGFloat f) {
 
 - (void)drawLineAtYPosition:(CGFloat)yPos
 {
-    yPos = SUPRound(yPos)+0.5;
+    yPos = round(yPos)+SINGLE_PIXEL;
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     
-    CGContextSetLineWidth(context, 0.5f);
+    CGContextSetLineWidth(context, SINGLE_PIXEL);
     
     CGContextMoveToPoint(context, 0, yPos); //start at this point
-    CGContextAddLineToPoint(context, 320, yPos); //draw to this point
+    CGContextAddLineToPoint(context, self.bounds.size.width, yPos); //draw to this point
     
     CGContextStrokePath(context);
 }
 
 - (void)drawLineAtXPosition:(CGFloat)xPos
 {
-    xPos = SUPRound(xPos);
+    xPos = round(xPos);
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     
-    CGContextSetLineWidth(context, 0.5f);
+    CGContextSetLineWidth(context, SINGLE_PIXEL);
     
     CGContextMoveToPoint(context, xPos, 0); //start at this point
     CGContextAddLineToPoint(context, xPos, self.bounds.size.height); //draw to this point
